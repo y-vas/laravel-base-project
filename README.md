@@ -1,12 +1,16 @@
-run this commands befor starting
+run this commands before starting
 
-docker-compose up
 composer update
+docker-compose up
+
+<!-- change the mysql adress from this container on the .env variables -->
+sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql_hl
 
 
-if dump doesn't work
+if automatic dump of the database doesn't work
+link yours with
+
 Tables ----------------------
-
 CREATE TABLE Users (
   `customerId` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `docType` VARCHAR(45) NULL,
