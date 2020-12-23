@@ -1,12 +1,12 @@
-run this commands befor starting
+run this commands before starting
 
-docker-compose up
 composer update
+docker-compose up
 
+if automatic dump of the database doesn't work
+link yours with
 
-if dump doesn't work
 Tables ----------------------
-
 CREATE TABLE Users (
   `customerId` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `docType` VARCHAR(45) NULL,
